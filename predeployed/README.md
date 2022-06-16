@@ -16,7 +16,7 @@ pip install context-predeployed
 from context_predeployed import ContextGenerator, CONTEXT_ADDRESS
 
 OWNER_ADDRESS = '0xd200000000000000000000000000000000000000'
-PROXY_ADMIN_ADDRESS = '0xd200000000000000000000000000000000000001'
+SCHAIN_NAME = 'test'
 
 config_generator = ContextGenerator()
 
@@ -26,7 +26,7 @@ genesis = {
         **config_generator.generate_allocation(
             contract_address=CONTEXT_ADDRESS,
             schain_owner=OWNER_ADDRESS,
-            proxy_admin_address=PROXY_ADMIN_ADDRESS
+            schain_name=SCHAIN_NAME
         )
     }
 }
