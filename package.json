@@ -1,0 +1,31 @@
+{
+  "name": "@skalenetwork/config-controller",
+  "version": "1.0.0",
+  "description": "config-controller",
+  "keywords": [
+    "SKALE",
+    "blockchain",
+    "ethereum"
+  ],
+  "homepage": "https://github.com/skalenetwork/context-contract#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skalenetwork/context-contract.git"
+  },
+  "license": "AGPL-3.0",
+  "author": "SKALE Labs and contributors",
+  "scripts": {
+    "build": "rm -r ./build; npx truffle build",
+    "compile": "npx truffle compile && cp build/contracts/Context.json predeployed/context_predeployed/artifacts",
+    "lint": "npx ethlint -d contracts",
+    "lint-fix": "npm run lint -- --fix",
+    "slither": "slither . --filter-path strings --filter-path Migrations",
+    "version": "node -e \"console.log(require('./package.json').version);\""
+  },
+  "devDependencies": {
+    "truffle": "5.1.30"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
