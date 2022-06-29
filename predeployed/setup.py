@@ -35,7 +35,7 @@ setup(
     keywords=['skale', 'predeployed'],
     packages=find_packages(exclude=['tests']),
     package_data={
-        'context_predeployed': ['artifacts/Context.json']
+        'context_predeployed': ['artifacts/Context.json', 'artifacts/Context.meta.json']
     },
     setup_requires=["setuptools-markdown"],
     classifiers=[
