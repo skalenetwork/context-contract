@@ -23,13 +23,14 @@ jobs:
           python-version: 3.8
       - name: Install dependencies
         run: |
-          npm i
+          yarn install
           cd predeployed/
           pip install wheel
           pip install -e .[dev]
       - name: Compile with truffle
         run: |
           npm run compile
+          python predeployed/scripts/generate_artifacts.py
       - name: Calculate versions
         run: |
           export BRANCH=${GITHUB_REF##*/}
