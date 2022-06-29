@@ -28,14 +28,14 @@ setup(
     author_email='support@skalelabs.com',
     url='https://github.com/skalenetwork/config-controller',
     install_requires=[
-        "predeployed-generator >= 0.0.1a4"
+        "predeployed-generator >= 1.1.0a0"
     ],
     python_requires='>=3.7,<4',
     extras_require=extras_require,
     keywords=['skale', 'predeployed'],
     packages=find_packages(exclude=['tests']),
     package_data={
-        'context_predeployed': ['artifacts/Context.json']
+        'context_predeployed': ['artifacts/Context.json', 'artifacts/Context.meta.json']
     },
     setup_requires=["setuptools-markdown"],
     classifiers=[
